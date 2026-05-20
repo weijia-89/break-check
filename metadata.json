@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "organization": "Independent",
+  "date": "May 2026",
+  "abstract": "Pre-flight checklist that catches the dozen shapes of terminal freeze, approval-dialog miss, and cross-agent collision before they happen, framed as a surf check before paddling out. Twelve Tier-1 reject clauses enumerate the syntax-shape and shape-of-failure patterns that freeze IDE terminals when an LLM composes a run_command tool call; seven Tier-2 audits catch what survives a Tier-1 pass. Framing principle: permission prompts are not a durable security model. Anchors on Anthropic's Claude Code auto-mode disclosure (users approve 93% of permission prompts) and the Penligent Sandboxes for Coding Agents analysis. Env-agnostic fork of weijia-89/safe-terminal; ships the skill body and metadata only, with the runtime wrapper available in the sibling repo. Loaded always-on; multi-agent installable via skills.sh.",
+  "references": [
+    "https://www.anthropic.com/engineering/claude-code-auto-mode",
+    "https://www.penligent.ai/hackinglabs/sandboxes-for-coding-agents/",
+    "https://github.com/weijia-89/safe-terminal",
+    "https://skills.sh"
+  ]
+}
