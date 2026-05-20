@@ -161,22 +161,21 @@ catches escapes in the chat transcript.
 - `metadata.json`, skills.sh leaderboard metadata
 - `LICENSE`, MIT
 
-## Reference implementation pointer
+## See also
 
-`break-check` ships the skill body and metadata only. The runtime
-wrapper (`safe-cmd.sh`) lives in a sibling project at
-[github.com/weijia-89/safe-terminal](https://github.com/weijia-89/safe-terminal),
-where it sits alongside an allowlist seeder, a deny-list seeder, a test
-suite, and the operator-specific configuration shape my own laptop uses.
-Operators wanting the runtime gate clone `safe-terminal`, copy
+[`weijia-89/safe-terminal`](https://github.com/weijia-89/safe-terminal)
+is the sibling repo where the runtime wrapper (`safe-cmd.sh`) lives,
+alongside an allowlist seeder, a deny-list seeder, a test suite, and
+the operator-specific configuration shape my own laptop uses. Operators
+wanting the runtime gate clone `safe-terminal`, copy
 `scripts/safe-cmd.sh` into their bin directory, and adapt the path
 assumptions to their environment.
 
-The two repos exist on purpose. `break-check` is the env-agnostic skill
-body that installs cleanly across the agents skills.sh supports
-(Windsurf, Claude Code, Cursor, Codex, Gemini CLI, and others).
-`safe-terminal` is the operator-specific bundle that includes the
-wrapper plus the local sync helpers (`scripts/bundle.sh`,
+The two repos exist on purpose. `break-check` (this repo) is the
+env-agnostic skill body that installs cleanly across the agents
+skills.sh supports (Windsurf, Claude Code, Cursor, Codex, Gemini CLI,
+and others). `safe-terminal` is the operator-specific bundle that
+includes the wrapper plus the local sync helpers (`scripts/bundle.sh`,
 `scripts/verify_safe_terminal_sync.sh`) for keeping the canonical body
 synchronized to the agent's on-disk rule paths.
 
